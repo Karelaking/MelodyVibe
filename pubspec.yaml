@@ -1,5 +1,5 @@
-name: myapp
-description: A new Flutter project.
+name: musick2k
+description: A new open source music applicaiton built in flutter.
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -10,6 +10,12 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  # https://pub.dev/packages/home_widget
+  home_widget: ^0.4.1
+  # https://pub.dev/packages/bouncing_widget
+  bouncing_widget: ^2.0.0
+  # https://pub.dev/packages/widget_and_text_animator
+  widget_and_text_animator: ^1.1.5
 
 dev_dependencies:
   flutter_test:
@@ -18,8 +24,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+ # Enable generation of localized Strings from arb files.
+  generate: true
 
-  
+
+  assets:
+    # Add assets to the application.
+    - assets/
+
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
@@ -39,3 +51,11 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+msix_config:
+  display_name: MusicK2k
+  publisher_display_name: Katiyarkarelaking
+  identity_name: com.whiteAngel.MusicK2k
+  icons_background_color: transparent
+  # logo_path: assets/ic_launcher.png
+  file_extension: .mp3, .m4a
