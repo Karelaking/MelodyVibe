@@ -1,4 +1,4 @@
-name: musick2k
+name: melodyvibe
 description: A new open source music applicaiton built in flutter.
 publish_to: 'none'
 version: 1.0.0+1
@@ -16,6 +16,7 @@ dependencies:
   bouncing_widget: ^2.0.0
   # https://pub.dev/packages/widget_and_text_animator
   widget_and_text_animator: ^1.1.5
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
@@ -53,9 +54,9 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
 msix_config:
-  display_name: MusicK2k
+  display_name: MelodyVibe
   publisher_display_name: Katiyarkarelaking
-  identity_name: com.whiteAngel.MusicK2k
+  identity_name: com.whiteAngel.MelodyVibe
   icons_background_color: transparent
   # logo_path: assets/ic_launcher.png
   file_extension: .mp3, .m4a
