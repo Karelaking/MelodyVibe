@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:melodyvibe/Common/page_transition.dart';
+import 'package:melodyvibe/Pages/Settings/theme_settings.dart';
 import 'package:melodyvibe/Widgets/SettingsListTile/settings_list_tile.dart';
 
 class Settings extends StatelessWidget {
@@ -6,8 +8,8 @@ class Settings extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
+    return CupertinoPageScaffold(
+      navigationBar: const CupertinoNavigationBar(
         middle: Text('Settings'),
       ),
       child: SafeArea(
@@ -18,34 +20,35 @@ class Settings extends StatelessWidget {
               SettingsListTile(
                 text: 'Theme',
                 subTitle: 'Dark Mode, Accent Color & Hue, Use System Theme',
-                leadingIcon: Icon(CupertinoIcons.sun_max),
+                leadingIcon: const Icon(CupertinoIcons.sun_max),
+                onTap: (){pushPageTo(context, const ThemeSettings());},
               ),
-              SettingsListTile(
+              const SettingsListTile(
                 text: 'App UI',
                 subTitle: 'Player Screen Background, Buttons to show in Mini Player, Use Dense Miniplayer',
                 leadingIcon: Icon(CupertinoIcons.app),
               ),
-              SettingsListTile(
+              const SettingsListTile(
                 text: 'Music & Playback',
                 subTitle: 'Music Language, Streaming Quality, Spotify Local Charts Location',
                 leadingIcon: Icon(CupertinoIcons.music_note),
               ),
-              SettingsListTile(
+              const SettingsListTile(
                 text: 'Download',
                 subTitle: 'Download Quality, Download Location, Download Name Format',
                 leadingIcon: Icon(CupertinoIcons.cloud_download),
               ),
-              SettingsListTile(
+              const SettingsListTile(
                 text: 'Others',
                 subTitle: 'Language, Include/Exclude Folders, Min Audio Lenght to Search Music',
                 leadingIcon: Icon(CupertinoIcons.settings),
               ),
-              SettingsListTile(
+              const SettingsListTile(
                 text: 'Backup & Resote',
                 subTitle: 'Create Backup, Restore, Audio Backup',
                 leadingIcon: Icon(CupertinoIcons.arrow_counterclockwise),
               ),
-              SettingsListTile(
+             const SettingsListTile(
                 text: 'About',
                 subTitle: 'Version, Share App, Contact Us',
                 leadingIcon: Icon(CupertinoIcons.info_circle),

@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:melodyvibe/Themes/themes.dart';
 import 'package:melodyvibe/Widgets/BottomBar/bottom_bar.dart';
 
 
@@ -12,10 +14,10 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return const GetCupertinoApp(
-      
+    return GetCupertinoApp(
+      theme: Themes.iosTheme(),
       title: 'MelodyVibe',
-      home: BottomBar(),
+      home: const BottomBar(),
     );
   }
 }

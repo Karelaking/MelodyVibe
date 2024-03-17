@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:melodyvibe/Common/page_transition.dart';
+import 'package:melodyvibe/Pages/Library/playlist.dart';
 import 'package:melodyvibe/Widgets/LibraryListItems/library_list_item.dart';
 
 class Library extends StatelessWidget {
@@ -6,34 +8,35 @@ class Library extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
-        navigationBar: CupertinoNavigationBar(middle: Text('Library')),
+    return CupertinoPageScaffold(
+        navigationBar: const CupertinoNavigationBar(middle: Text('Library')),
         child: SafeArea(
           child: Column(
             children: [
-              LibraryListItem(
+              const LibraryListItem(
                 text: 'Now Playing',
                 leadingIcon: Icon(CupertinoIcons.play),
               ),
-                            LibraryListItem(
+                            const LibraryListItem(
                 text: 'Last Session',
                 leadingIcon: Icon(CupertinoIcons.clock),
               ),
-                            LibraryListItem(
+                            const LibraryListItem(
                 text: 'Favorites',
                 leadingIcon: Icon(CupertinoIcons.heart),
               ),
-                            LibraryListItem(
+                            const LibraryListItem(
                 text: 'My Music',
                 leadingIcon: Icon(CupertinoIcons.music_house),
               ),
-                            LibraryListItem(
+                            const LibraryListItem(
                 text: 'Download',
                 leadingIcon: Icon(CupertinoIcons.cloud_download),
               ),
                             LibraryListItem(
                 text: 'Playlists',
-                leadingIcon: Icon(CupertinoIcons.music_note),
+                leadingIcon: const Icon(CupertinoIcons.music_note),
+                onTap: (){pushPageTo(context, const PlayList());},
               ),
               
             ],
