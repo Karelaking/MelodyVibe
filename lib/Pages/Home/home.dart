@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:melodyvibe/Widgets/MusicListTile/music_list_tile.dart';
 
 class Home extends StatefulWidget {
@@ -14,15 +13,28 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: const CupertinoNavigationBar(
-        middle: Text('MelodyVibe'),
+        middle: Text('Melody Vibe'),
       ),
-      child:ListView(children: const [
-        MusicListTile(),
-        Divider(),
-        MusicListTile(),
-        Divider(),
-        MusicListTile(),
-        ],)
+      child:SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: CupertinoSearchTextField(
+                onTap: () {
+                }),
+            )
+            ,
+            Expanded(
+              child: ListView(children: const [
+                MusicListTile(),
+                MusicListTile(),
+                MusicListTile(),
+                ],),
+            ),
+          ],
+        ),
+      )
     );
   }
 }

@@ -17,7 +17,7 @@ class BottomBar extends StatelessWidget {
             icon: Icon(Icons.home_rounded),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search_rounded),
+            icon: Icon(Icons.explore_rounded),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.library_music_rounded),
