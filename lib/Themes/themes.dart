@@ -1,14 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Themes{
- static CupertinoThemeData iosTheme(){
- return const CupertinoThemeData(primaryColor:Colors.teal,
- textTheme: CupertinoTextThemeData(primaryColor: CupertinoColors.black,
- textStyle: TextStyle(
-  color: CupertinoColors.black
- )
- )
- );
-}
+ static ThemeData lightTheme(){
+ return ThemeData(primaryColor:Colors.teal.shade900,brightness: Brightness.light);}
+
+  static ThemeData darkTheme(){
+ return ThemeData(primaryColor:Colors.teal.shade300,brightness: Brightness.dark);}
 }
